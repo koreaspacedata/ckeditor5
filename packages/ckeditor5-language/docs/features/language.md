@@ -24,6 +24,30 @@ There are other language-related CKEditor 5 features you may want to check:
 * {@link features/ui-language UI Language}  &ndash; Set the UI language.
 * {@link features/spelling-and-grammar-checking Spelling and grammar checking} &ndash; Employ multi-language spell check for flawless content.
 
+## Configuring available languages
+
+To modify the list of available languages displayed in the language dropdown, {@link module:core/editor/editorconfig~LanguageConfig language config} needs to be updated.
+
+Example below shows the configuration used for the {@link features/language#demo demo} above:
+
+```js
+ClassicEditor
+    .create( document.querySelector( '#editor' ), {
+		language: {
+			textPartLanguage: [
+				{ title: 'Arabic', languageCode: 'ar' },
+				{ title: 'French', languageCode: 'fr' },
+				{ title: 'Hebrew', languageCode: 'he' },
+				{ title: 'Spanish', languageCode: 'es' }
+			]
+		},
+    } )
+    .then( ... )
+    .catch( ... );
+```
+
+Read more in {@link module:core/editor/editorconfig~LanguageConfig#textPartLanguage textPartLanguage}.
+
 ## Installation
 
 To add this feature to your rich-text editor, install the [`@ckeditor/ckeditor5-language`](https://www.npmjs.com/package/@ckeditor/ckeditor5-language) package:
