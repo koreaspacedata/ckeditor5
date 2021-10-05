@@ -47,7 +47,7 @@ ClassicEditor
     .catch( ... );
 ```
 
-Read more in API documentation of {@link module:core/editor/editorconfig~LanguageConfig#textPartLanguage `config.language.textPartLanguage`} configuration option.
+Read more in the API documentation of the {@link module:core/editor/editorconfig~LanguageConfig#textPartLanguage `config.language.textPartLanguage`} configuration option.
 
 ## Installation
 
