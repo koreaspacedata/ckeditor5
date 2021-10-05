@@ -26,9 +26,9 @@ There are other language-related CKEditor 5 features you may want to check:
 
 ## Configuring available languages
 
-To modify the list of available languages displayed in the language dropdown, {@link module:core/editor/editorconfig~LanguageConfig language config} needs to be updated.
+To modify the list of available languages displayed in the language dropdown, the {@link module:core/editor/editorconfig~LanguageConfig language config} needs to be updated.
 
-Example below shows the configuration used for the [demo](#demo) above:
+The example below shows the configuration used for the [demo](#demo) above:
 
 ```js
 ClassicEditor
@@ -47,7 +47,7 @@ ClassicEditor
     .catch( ... );
 ```
 
-Setting the language of parts of the code is configured using the {@link module:core/editor/editorconfig~LanguageConfig#textPartLanguage `config.language.textPartLanguage`} configuration option.
+Read more in API documentation of {@link module:core/editor/editorconfig~LanguageConfig#textPartLanguage `config.language.textPartLanguage`} configuration option.
 
 ## Installation
 
