@@ -8,31 +8,6 @@
 				max-width: 800px;
 				margin: 20px auto;
 			}
-			.editable-container,
-			.toolbar-container {
-				position: relative;
-				border: 1px solid #ddd;
-				background: #eee;
-			}
-
-			.toolbar-container {
-				padding: 1em;
-			}
-
-			.editable-container {
-				padding: 3em;
-				overflow-y: scroll;
-				max-height: 500px;
-			}
-
-			.editable-container .ck-editor__editable {
-				min-height: 21cm;
-				padding: 2em;
-				border: 1px #d3d3d3 solid;
-				border-radius: var(--ck-border-radius);
-				background: white;
-				box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-			}
 		</style>
 	</head>
 	<body>
@@ -68,13 +43,6 @@
 			ClassicEditor.create(document.querySelector("#editor"))
 				.then((editor) => {
 					window.editor = editor;
-
-					document
-						.querySelector(".toolbar-container")
-						.appendChild(editor.ui.view.toolbar.element);
-					document
-						.querySelector(".editable-container")
-						.appendChild(editor.ui.view.editable.element);
 				})
 				.catch((error) => {
 					console.error(

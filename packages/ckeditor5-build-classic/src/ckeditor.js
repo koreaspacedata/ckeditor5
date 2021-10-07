@@ -34,8 +34,33 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 
 export default class ClassicEditor extends ClassicEditorBase {}
+
+ClassicEditor.create(document.querySelector('#editor'), {
+	heading: {
+		options: [
+			{
+				model: 'paragraph',
+				title: 'Paragraph',
+				class: 'ck-heading_paragraph',
+			},
+			{
+				model: 'heading1',
+				view: 'h1',
+				title: 'Heading 1',
+				class: 'ck-heading_heading1',
+			},
+			{
+				model: 'heading2',
+				view: 'h2',
+				title: 'Heading 2',
+				class: 'ck-heading_heading2',
+			},
+		],
+	},
+});
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -67,6 +92,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
+	HorizontalLine,
 ];
 
 // Editor configuration.
@@ -83,6 +109,7 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'outdent',
 			'indent',
+			'horizontalLine',
 			'|',
 			'uploadImage',
 			'blockQuote',
