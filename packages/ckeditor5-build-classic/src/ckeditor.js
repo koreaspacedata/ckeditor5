@@ -38,30 +38,6 @@ import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalli
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
-ClassicEditor.create(document.querySelector('#editor'), {
-	heading: {
-		options: [
-			{
-				model: 'paragraph',
-				title: 'Paragraph',
-				class: 'ck-heading_paragraph',
-			},
-			{
-				model: 'heading1',
-				view: 'h1',
-				title: 'Heading 1',
-				class: 'ck-heading_heading1',
-			},
-			{
-				model: 'heading2',
-				view: 'h2',
-				title: 'Heading 2',
-				class: 'ck-heading_heading2',
-			},
-		],
-	},
-});
-
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
@@ -153,6 +129,20 @@ ClassicEditor.defaultConfig = {
 			'resizeImage',
 			'linkImage',
 		],
+	},
+	link: {
+		decorators: {
+			buttonLink: {
+				mode: 'manual',
+				label: 'Style as button',
+				defaultValue: false,
+				attributes: {
+					target: '_blank',
+					rel: 'noopener noreferrer',
+					class: 'link-button',
+				},
+			},
+		},
 	},
 	table: {
 		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
