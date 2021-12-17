@@ -148,5 +148,10 @@ ClassicEditor.defaultConfig = {
 		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en',
+	language: 'ko',
+	// 기본적인 html이 필터링으로 지워지지 않도록 설정
+	allowedContent: true,
+	// 소스 보기시 자동으로 공백 태그(&nbsp;) 추가되는 이슈 해결
+	fillEmptyBlocks: false,
+	basicEntities: false,
 };
